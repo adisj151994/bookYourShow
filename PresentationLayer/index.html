@@ -13,18 +13,25 @@
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <link href="StyleSheets/Index.css" rel="stylesheet" />
 </head>
-<body>
-	<div class="jumbotron text-center" style="color: #fff ; background-color:#111;">
-		<h2>Book-Your-Show</h2>
+<body style="background-color:#00C8C8;">
+	<div class="jumbotron text-center" style="color: #fff ; background-color:#10739b; ">
+		<h2>B o o k &nbsp;&nbsp; Y o u r &nbsp;&nbsp;  S h o w</h2>
 	</div>
-	<div class="container">
+    <div style="display:flex;flex-wrap:wrap">
+        <div style="width:10%"></div>
+        <div style="width:80%">
+            <div ng-view></div>
+            </div>
+        <div style="width:10%"></div>
+    </div>
+	<div class="container" style="color: #fff ; background-color:#00C8C8;">
 		<div class="row">
 			<div class="col-sm-1">
 			</div>
-			<div class="col-sm-10" style="height:100%">
-				<div class="row">
-					<div ng-view></div>
-				</div>	
+			<div class="col-sm-10" style="height:100%;">
+
+					
+
 			</div>
 			<div class="col-sm-1">
 				
