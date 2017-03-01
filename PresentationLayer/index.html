@@ -3,9 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<title>Book Your Show</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="jsxtra/bootstrap/bootstrap.js"></script>
+    <script src="jsxtra/angular/angular.js"></script>
+    <script src="jsxtra/angular-route/angular-route.js"></script>
+    <script src="jsxtra/angular-resource/angular-resource.js"></script>
+    <script src="jsxtra/BootstrapFiles/bootstrap.js"></script>
+    <script src="jsxtra/BootstrapFiles/bootstrap.min.js"></script>
     <link href="StyleSheets/Index.css" rel="stylesheet" />
 </head>
 <body>
@@ -16,7 +18,7 @@
 		<div class="row">
 			<div class="col-sm-1">
 			</div>
-			<div class="col-sm-10" style=" height:100%">
+			<div class="col-sm-10" style="height:100%">
 				<div class="row">
 					<div ng-view></div>
 				</div>	
@@ -26,9 +28,6 @@
 			</div>
 		</div>
 	</div>
-		<script src="jsxtra/angular/angular.js"></script>
-		<script src="jsxtra/angular-route/angular-route.js"></script>
-		<script src="jsxtra/angular-resource/angular-resource.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/controllers/movieTheatreMapCtrl.js"></script>
         <script src="js/controllers/movieListCtrl.js"></script>

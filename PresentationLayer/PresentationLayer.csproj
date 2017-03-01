@@ -106,6 +106,11 @@
     <Content Include="bin\Microsoft.AI.WindowsServer.dll" />
     <Content Include="bin\Microsoft.ApplicationInsights.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="index.html" />
     <Content Include="jsxtra\angular-resource\angular-resource.js" />
     <Content Include="jsxtra\angular-route\angular-route.js" />
@@ -119,6 +124,20 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="jsxtra\BootstrapFiles\jquery-1.9.1.intellisense.js" />
+    <Content Include="jsxtra\BootstrapFiles\bootstrap.js" />
+    <Content Include="jsxtra\BootstrapFiles\bootstrap.min.js" />
+    <Content Include="jsxtra\BootstrapFiles\jquery-1.9.1.js" />
+    <Content Include="jsxtra\BootstrapFiles\jquery-1.9.1.min.js" />
+    <Content Include="jsxtra\BootstrapFiles\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
