@@ -1,5 +1,5 @@
 angular.module('bys')
-	.controller('movieListCtrl', function TodoCtrl($scope, $routeParams, $location, $rootScope, $sessionStorage) {
+	.controller('movieListCtrl', function TodoCtrl($scope, $routeParams, $location, $rootScope) {
 		'use strict';
 		console.log("in");
 		var movs= [
@@ -54,9 +54,7 @@ angular.module('bys')
 
 		$scope.onClickMovie = function (movie) {
 		    $rootScope.movieSelected = movie;
-		    $window.sessionStorage.movieSelecteds = movie;
 		    console.log($rootScope.movieSelected);
-		    console.log($sessionStorage.movieSelecteds);
 		    $location.path('/Map');
 		};
 });
