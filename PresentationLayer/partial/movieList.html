@@ -1,9 +1,10 @@
-<div  ng-controller="movieListCtrl" class="row" ng-repeat="movie in movies" style="margin:20px ; background-color:#555">
-	<div class="col-sm-6 text-center" style="padding:10px;background-color:#666">
+Search movie :<input type="text" ng-model="searchMovies" />
+<div  ng-controller="movieListCtrl" class="row" ng-repeat="movie in movies | filter:searchMovies" ng-click="onClickMovie(movie)" style="margin:20px ; background-color:#808080">
+	<div class="col-sm-6 text-center" style="padding:10px">
 		<img ng-src="/assets/{{movie.movieName}}.jpg">	
 	</div>
-	<div class="col-sm-6 " style="padding:20px;background-color:#777">
-		<div class="row" style="margin:10px ;background-color:#999">
+	<div class="col-sm-6 " style="padding:20px">
+		<div class="row" style="margin:10px">
 			<div class="col-sm-6" style="padding:10px">
 				<h2>{{movie.movieName}}</h2><br>
 			</div>
@@ -13,7 +14,7 @@
 		</div>
 			
 			<h4>{{movie.movieDescription}}</h4>	
-		<div class="row" style="margin:10px ;background-color:#999">
+		<div class="row" style="margin:10px">
 			<div class="col-sm-8" style="padding:5px">
 				<h5>{{movie.movieGenre}}</h5>
 			</div>

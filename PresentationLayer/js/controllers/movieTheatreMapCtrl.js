@@ -1629,5 +1629,4 @@ angular.module('bys')
                 $scope.class[x][y]=classes[x][y];
             }
         }
-
 });
