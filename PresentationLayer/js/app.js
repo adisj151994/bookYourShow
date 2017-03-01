@@ -17,4 +17,5 @@ angular.module('bys', ['ngRoute', 'ngResource'])
 			.otherwise({
 			    redirectTo: '/'
 			});
+        
 	});
