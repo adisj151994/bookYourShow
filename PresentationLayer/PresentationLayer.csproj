@@ -129,6 +129,7 @@
   <ItemGroup>
     <Content Include="partial\movieList.html" />
     <Content Include="partial\movieTheatreMap.html" />
+    <Content Include="StyleSheets\Index.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
