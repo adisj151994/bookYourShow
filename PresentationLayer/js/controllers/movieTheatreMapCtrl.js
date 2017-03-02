@@ -1591,6 +1591,12 @@ angular.module('bys')
     mtm=[];
     for(var i=0;i<63;i++){if(i%9==0){mtm.push(b.slice(i,i+9));}}
     console.log(mtm);
+    
+    for(var o=0;o<7;o++)
+    {
+        mtm[o].sort(function (a, b) { if (a.objTheatreScreenMappind.screenID > b.objTheatreScreenMappind.screenID) { return 1; } else if (a.objTheatreScreenMappind.screenID < b.objTheatreScreenMappind.screenID) { return -1; } else { return 0; } });
+    }
+    
 
     $scope.MTMap=mtm;
 
