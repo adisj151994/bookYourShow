@@ -14,13 +14,23 @@ namespace DataLayer
     {
         protected static IMongoClient _client;
         protected static IMongoDatabase _database;
-        
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PFA0L7A\SQLEXPRESS;Initial Catalog=bookYourShowDB;Integrated Security=True");
+
+        public void Test()
+        {
+            var connectionString = "mongodb://bysAdmin:bysAdmin123@ds113580.mlab.com:13580/bookyourshow";
+            var databaseName = MongoUrl.Create(connectionString).DatabaseName;
+            // var _server = MongoServerAddress.Create(connectionString);
+        }
 
         public List<Movies> GetMovies()
         {
+            var connectionString = "mongodb://bysAdmin:bysAdmin123@ds113580.mlab.com:13580/bookyourshow";
+
+           // MongoClient.connect("");
+            //MongoUrl url = "mongodb://bysAdmin:bysAdmin123@ds113580.mlab.com:13580/bookyourshow";
             _client = new MongoClient();
-            _database = _client.GetDatabase("mongodb://bysAdmin:bysAdmin123@ds113580.mlab.com:13580/bookyourshow");
+            _database = _client.GetDatabase("test");
 
             Movies objMovies;
             List<Movies> lstMovies = new List<Movies>();
