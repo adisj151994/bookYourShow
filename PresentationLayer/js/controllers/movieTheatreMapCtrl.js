@@ -1617,16 +1617,40 @@ angular.module('bys')
         $scope.y=9;
         $scope.class=classes;
 
-        $scope.change=function(x,y){
-            if(classes[x][y]=="grey")
-            {
-                classes[x][y]="green";
-                $scope.class[x][y]=classes[x][y];
+        $scope.change = function (x, y) {
+            if (classes[x][y] == "grey") {
+                classes[x][y] = "green";
+                $scope.class[x][y] = classes[x][y];
+
             }
-            else
-            {
-                classes[x][y]="grey";
-                $scope.class[x][y]=classes[x][y];
+            else {
+                classes[x][y] = "grey";
+                $scope.class[x][y] = classes[x][y];
             }
-        }
+        };
+        var clss = [];
+        var d;
+        $scope.display = function (p, q) {
+            d = mtm[p][q].dynSeatMatrix;
+            d.split("");
+            clss = [];
+            for(var v=0;v<9;v++)
+            {
+                if (d[v] == "0")
+                {
+                    clss.push("grey");
+                }
+                else if(d[v]=="Z")
+                {
+                    clss.push("not");
+                }
+                else
+                {
+                    clss.push("green");
+                }
+
+            }
+            $scope.d = d;
+            $scope.classo = clss;
+        };
 });
