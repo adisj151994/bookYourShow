@@ -5,15 +5,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using EntityLayer;
+using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace DataLayer
 {
     public class CrudOperations
     {
+        protected static IMongoClient _client;
+        protected static IMongoDatabase _database;
+        
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-PFA0L7A\SQLEXPRESS;Initial Catalog=bookYourShowDB;Integrated Security=True");
 
         public List<Movies> GetMovies()
         {
+            _client = new MongoClient();
+            _database = _client.GetDatabase("mongodb://bysAdmin:bysAdmin123@ds113580.mlab.com:13580/bookyourshow");
+
             Movies objMovies;
             List<Movies> lstMovies = new List<Movies>();
             SqlCommand cmdGetMovies = new SqlCommand("SELECT * FROM Movies",con);
