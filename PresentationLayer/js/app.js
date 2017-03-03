@@ -11,7 +11,15 @@ angular.module('bys', ['ngRoute', 'ngResource'])
 			})
 			.when('/Map', {
 			    controller: 'movieTheatreMapCtrl',
-			    templateUrl: 'partial/movieTheatreMap.html'
+			    templateUrl: 'partial/movieTheatreMap.html',
+			    resolve: {
+			        m: function ($location) {
+			            if(sessionStorage.movieSel==undefined)
+			            {
+			                $location.path('/');
+			            }
+			        }
+			    }
 			    //template: '<div class="text-center" ng-repeat="movie in movies" style="position:relative;margin:30px;background-color:#eee ;width: auto  ; height:100px">{{movie}}</div>',
 			})
 			.otherwise({

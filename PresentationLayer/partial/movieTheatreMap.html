@@ -1,8 +1,8 @@
 <div ng-controller="movieTheatreMapCtrl">
     <div style="display:flex;flex-wrap:nowrap;color:#6E5D78">
         <div style="width:25%;border-style:none solid none none;border-color:#006464;border-width:1px;border-spacing:3px" class="text-center">
-            <img style="margin:20px 0 0 0;" ng-src="/assets/{{movieSelected.movieName}}.jpg">	
-            <h2>{{movieSelected.movieName}}</h2>
+            <img class="shadow" style="margin:20px 0 0 0;" ng-src="/assets/{{movieSe.movieName}}.jpg">	
+            <h2>{{movieSe.movieName}}</h2>
         </div>
         <table style="width:10%;margin:20px 0px 0px 20px">
             <thead>
@@ -10,7 +10,7 @@
             <tbody>
                 <tr ng-repeat="xx in [0,1,2,3,4,5,6]">
                     <td>
-                        <div style="margin:10px 10px 10px 0">{{MTMap[xx][0].showDate.split(':')[0]}}</div>
+                        <div style="margin:10px 10px 10px 0"><bold>{{MTMap[xx][0].showDate.split(':')[0]}}</bold></div>
                     </td>
                 </tr>
             </tbody>
