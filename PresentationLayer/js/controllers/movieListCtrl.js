@@ -55,6 +55,9 @@ angular.module('bys')
 		$scope.onClickMovie = function (movie) {
 		    $rootScope.movieSelected = movie;
 		    console.log($rootScope.movieSelected);
+		    sessionStorage.movieSel = JSON.stringify(movie);
+		    console.log(JSON.parse(sessionStorage.movieSel).movieName);
+
 		    $location.path('/Map');
 		};
 });

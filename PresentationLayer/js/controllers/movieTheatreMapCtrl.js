@@ -1,6 +1,8 @@
 angular.module('bys')
 	.controller('movieTheatreMapCtrl', function TodoCtrl($scope, $routeParams) {
-		'use strict';
+	    'use strict';
+
+	    $scope.movieSe = JSON.parse(sessionStorage.movieSel);
         var mtm=[
   {
     "movieTheatreMappingID": 1,
